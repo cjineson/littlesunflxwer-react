@@ -10,7 +10,7 @@ const sampleProducts = [
     popular: true,
     imageUrls: [
       "/images/clips_4.jpg",
-      "/images/clips_1.jpg"
+      "/images/clips_7.jpg"
     ]
   },
   {
