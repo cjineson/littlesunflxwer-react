@@ -74,8 +74,6 @@ class ConnectedDetails extends Component {
     if (!this.state.item) {
       return null;
     }
-    console.log("yo");
-    console.log(this.state.item.imageUrls);
 
     return (
       <div style={{ padding: 10 }}>
