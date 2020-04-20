@@ -9,7 +9,8 @@ const sampleProducts = [
       "Pair of Sunflower Hair Clips",
     popular: true,
     imageUrls: [
-      "/images/clips_4.jpg"
+      "/images/clips_4.jpg",
+      "/images/clips_1.jpg"
     ]
   },
   {
@@ -48,7 +49,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 3,
+    id: 5,
     name: "Hat",
     category: "Hats",
     price: 15,
