@@ -13,7 +13,7 @@ import {
   toggleMenu,
   logout
 } from "../../Redux/Actions";
-import cartImage from "../../Images/logo2.png";
+// import cartImage from "../../Images/logo2.png";
 import Auth from "../../Auth";
 import { categories } from "../../Data";
 import Person from "@material-ui/icons/PersonOutline";
@@ -116,7 +116,7 @@ class ConnectedHeader extends Component {
             </Button>
           </div>
           <div className="right-part">
-            {!this.props.loggedInUser ? (
+            {/* {!this.props.loggedInUser ? (
               <Button
                 variant="outlined"
                 style={{ marginRight: 20 }}
@@ -136,7 +136,7 @@ class ConnectedHeader extends Component {
                 >
                   <Person />
                 </Avatar>
-              )}
+              )} */}
             <IconButton
               aria-label="Cart"
               onClick={() => {
