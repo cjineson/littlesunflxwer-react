@@ -4,7 +4,7 @@ import * as CONSTANTS from "./Constants";
 const initialState = {
   cartItems: [],
   showCartDialog: false,
-  showMenu: true,
+  showMenu: false,
   checkedOutItems: [],
   loggedInUser: null
 };
