@@ -72,7 +72,7 @@ class ConnectedHeader extends Component {
 
             /> */}
             
-            <span role="img" aria-label="sunflower">🌻</span><p style={{ color: "black" }}>&nbsp;&nbsp;Little Sunflxwer</p>
+            <a href="/" style={{ textDecoration: "none" }}><p style={{ color: "black" }}><span role="img" aria-label="sunflower">🌻</span>&nbsp;&nbsp;Little Sunflxwer</p></a>
 
             <TextField
               label="Search products"
