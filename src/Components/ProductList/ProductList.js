@@ -88,8 +88,6 @@ class ProductList extends Component {
           updateQueryString={this.updateQueryString}
           totalItemsCount={this.state.totalItemsCount} />
 
-        <Banner/>
-
         <div style={{ flex: 1 }}>
           {this.state.items.map(item => {
             return <Item key={item.id} item={item} />;
