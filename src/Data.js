@@ -28,7 +28,7 @@ const sampleProducts = [
   {
     id: 3,
     name: "Blanket",
-    category: "Blanket",
+    category: "Blankets",
     price: 30,
     description:
       "Hand crocheted blanket, available in various colours, please ask for custom orders!",
