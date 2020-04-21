@@ -7,7 +7,6 @@ import Api from "../../Api";
 import Item from "../Item/Item";
 import { connect } from "react-redux";
 import TextField from "@material-ui/core/TextField";
-import Paper from '@material-ui/core/Paper';
 
 
 
