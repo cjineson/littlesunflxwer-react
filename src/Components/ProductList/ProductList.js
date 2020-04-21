@@ -5,7 +5,7 @@ import queryString from "query-string";
 import Api from "../../Api";
 import Paging from "../Paging/Paging";
 import ProductsHeader from "../ProductsHeader/ProductsHeader"
-
+import Banner from "../Banner/Banner"
 
 // This component is responsible for fetching products. It determines from query string which products to fetch.
 // The URL is checked on initial mount and when URL changes.
@@ -82,6 +82,8 @@ class ProductList extends Component {
           parsedQS={parsedQS}
           updateQueryString={this.updateQueryString}
           totalItemsCount={this.state.totalItemsCount} />
+
+        <Banner/>
 
         <div style={{ flex: 1 }}>
           {this.state.items.map(item => {
