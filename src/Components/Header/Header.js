@@ -71,6 +71,7 @@ class ConnectedHeader extends Component {
               style={{ marginLeft: 10 }}
 
             />
+            
             <TextField
               label="Search products"
               value={this.state.searchTerm}
