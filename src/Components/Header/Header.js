@@ -65,13 +65,15 @@ class ConnectedHeader extends Component {
               <MenuIcon size="medium" />
             </IconButton>
 
-            <img
+            {/* <img
               src={cartImage}
               alt={"Logo"}
               style={{ marginLeft: 10 }}
 
-            />
+            /> */}
             
+            <span role="img" aria-label="sunflower">🌻</span><p style={{ color: "black" }}>&nbsp;&nbsp;Little Sunflxwer</p>
+
             <TextField
               label="Search products"
               value={this.state.searchTerm}
