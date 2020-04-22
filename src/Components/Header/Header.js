@@ -73,7 +73,7 @@ class ConnectedHeader extends Component {
             /> */}
             
             <a href="/" style={{ textDecoration: "none", fontSize: "1em"}}><p style={{ color: "black" }}><span role="img" aria-label="sunflower">🌻</span>&nbsp;&nbsp;Little Sunflxwer</p></a>
-
+{/* 
             <TextField
               label="Search products"
               value={this.state.searchTerm}
@@ -113,7 +113,7 @@ class ConnectedHeader extends Component {
             >
               {" "}
               Search
-            </Button>
+            </Button> */}
           </div>
           <div className="right-part">
             {/* {!this.props.loggedInUser ? (
