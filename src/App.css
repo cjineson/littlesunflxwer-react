@@ -6,7 +6,7 @@
   min-height: 100%;
   flex-direction: column;
   display: flex;
-  min-width: 900px;
+  /* min-width: 900px; */
 }
 
 html, #root, body {
@@ -36,4 +36,9 @@ body {
   margin:auto;
 }
 
+/* @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+} */
  
