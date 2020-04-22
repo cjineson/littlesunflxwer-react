@@ -50,12 +50,12 @@ class ProductsHeader extends Component {
     return (
       <div>
         <div style={{ padding: 10, display: "flex", alignItems: "center" }}>
-          <div style={{ flex: 1, fontSize: 24 }}>
+          <div style={{ flex: 1, fontSize: "1em" }}>
             <div>{category ? category : "Popular Products"}</div>
             {subtitle}
           </div>
 
-          <FormControlLabel
+          {/* <FormControlLabel
             control={
               <Checkbox
                 color="primary"
@@ -93,7 +93,7 @@ class ProductsHeader extends Component {
           >
             <MenuItem value={"lh"}>Sort by price: low to high</MenuItem>
             <MenuItem value={"hl"}>Sort by price: high to low</MenuItem>
-          </Select>
+          </Select> */}
         </div>
 
         {/* This is dialog which opens up for setting price filter */}
