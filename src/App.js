@@ -14,7 +14,7 @@ import Footer from "./Components/Footer/Footer";
 class App extends Component {
   render() {
     return (
-      <div className="app" style={{ backgroundImage: `url(${require("./images/background.jpg")})`,backgroundPosition: 'right top', backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>
+      <div className="app" style={{ backgroundImage: `url(${require("./images/background.jpg")})`,backgroundPosition: 'right top', backgroundSize: 'auto  100%', backgroundRepeat: 'no-repeat', backgroundAttachment: "fixed" }}>
         <Header />
         <div className="app-body">
           <Menu />
