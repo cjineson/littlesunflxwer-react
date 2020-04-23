@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "./Footer.css";
+import flower from "../../images/flower.jpg";
 
 class Footer extends Component {
   render() {
@@ -8,17 +9,17 @@ class Footer extends Component {
       <div
         style={{
           boxSizing: "border-box",
-          padding: 10,
+          padding: 5,
           borderTop: "1px solid lightgray",
-          height: 100,
+          height: 50,
           backgroundColor: "#f1f1f1",
           justifyContent: "space-around",
           display: "flex"
         }}
       >
         <div>
-          <div
-            style={{ color: "#504F5A", fontWeight: "bold", marginBottom: 10 }}
+          <div className="footerHead"
+            style={{ color: "#504F5A", fontWeight: "bold" }}
           >
             Buy
           </div>
@@ -52,8 +53,8 @@ class Footer extends Component {
           </NavLink>
         </div>
         <div>
-          <div
-            style={{ color: "#504F5A", fontWeight: "bold", marginBottom: 10 }}
+          <div className="footerHead"
+            style={{ color: "#504F5A", fontWeight: "bold"}}
           >
             About us
           </div>
@@ -73,8 +74,8 @@ class Footer extends Component {
           </NavLink>
         </div>
         <div>
-          <div
-            style={{ color: "#504F5A", fontWeight: "bold", marginBottom: 10 }}
+          <div className="footerHead"
+            style={{ color: "#504F5A", fontWeight: "bold" }}
           >
             Social Media
           </div>
@@ -88,6 +89,13 @@ class Footer extends Component {
           >
             <div className="footerItem">Facebook</div>
           </a>
+        </div>
+        <div className="footerImg">
+          <img
+            src={flower}
+            alt={"Flower"}
+            style={{ marginLeft: 10, marginBottom: 10, height: "35px"}}
+          />
         </div>
       </div>
     );
