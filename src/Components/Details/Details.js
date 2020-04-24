@@ -75,122 +75,127 @@ class ConnectedDetails extends Component {
     }
 
     return (
-      <div style={{ padding: 10 }}>
-        <div
-          style={{
-            marginBottom: 20,
-            marginTop: 10,
-            fontSize: "1em"
-          }}
-        >
-          {this.state.item.name}
-        </div>
-        
-        <div>
-          
-          {this.state.item.imageUrls.map((value, index) => {
-            return <img key={index} src={this.state.item.imageUrls[index]} alt="" width={250} height={250}
-              style={{
-                border: "1px solid lightgray",
-                marginRight: "30px",
-                marginBottom: "30px",
-                borderRadius: "5px",
-                objectFit: "cover"
-              }} />
-          })}
-
-        {/* Product description */}
-        <div
-          style={{
-            marginTop: 20,
-            marginBottom: 20,
-            fontSize: "1em"
-          }}
-        >
-          {/* Product Description */}
-        </div>
-        <div
-          style={{
-            maxHeight: 200,
-            fontSize: 13,
-            overflow: "auto",
-            marginBottom: 25
-          }}
-        >
-          {this.state.item.description ? this.state.item.description : "Not available"}
-        </div>
-
+      <div>
+        <div style={{ padding: 10 }}>
           <div
             style={{
-              flex: 1,
-              marginLeft: 20,
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between"
+              marginBottom: 20,
+              marginTop: 10,
+              fontSize: "1em"
             }}
           >
-
-            <div style={{
-              fontSize: "1.5em",
-              marginTop: "10px"
-            }}>
-              £{this.state.item.price}
-            </div>
-
-            {/* {this.state.item.popular && (
-              <div style={{ fontSize: 14, marginTop: 5, color: "#228B22" }}>
-                (Popular product)
-              </div>
-            )} */}
-
-            <TextField
-              type="number"
-              value={this.state.quantity}
-              style={{ marginLeft: 20, marginBottom: 10, width: 30, fontSize: ".3em",}}
-              label="Quantity"
-              inputProps={{ min: 1, max: 10, step: 1 }}
-              onChange={e => {
-                this.setState({ quantity: parseInt(e.target.value) });
-              }}
-            />
+            {this.state.item.name}
+          </div>
+          
+          <div>
             
-            <Button
-              style={{ 
-                fontSize: ".8em",
-                marginLeft: 30
-              }}
-              color="primary"
-              variant="outlined"
-              onClick={() => {
-                this.props.dispatch(
-                  addItemInCart({
-                    ...this.state.item,
-                    quantity: this.state.quantity
-                  })
-                );
+            {this.state.item.imageUrls.map((value, index) => {
+              return <img key={index} src={this.state.item.imageUrls[index]} alt="" width={250} height={250}
+                style={{
+                  border: "1px solid lightgray",
+                  marginRight: "30px",
+                  marginBottom: "30px",
+                  borderRadius: "5px",
+                  objectFit: "cover"
+                }} />
+            })}
+
+          {/* Product description */}
+          <div
+            style={{
+              marginTop: 20,
+              marginBottom: 20,
+              fontSize: "1em"
+            }}
+          >
+            {/* Product Description */}
+          </div>
+          <div
+            style={{
+              maxHeight: 200,
+              fontSize: 13,
+              overflow: "auto",
+              marginBottom: 25
+            }}
+          >
+            {this.state.item.description ? this.state.item.description : "Not available"}
+          </div>
+
+            <div
+              style={{
+                flex: 1,
+                marginLeft: 20,
+                display: "flex",
+                flexDirection: "row"
               }}
             >
-              Add to Cart <AddShoppingCartIcon style={{ marginLeft: 5 }} />
-            </Button>
+
+              <div style={{
+                fontSize: "1.5em",
+                marginTop: "10px"
+              }}>
+                £{this.state.item.price}
+              </div>
+
+              {/* {this.state.item.popular && (
+                <div style={{ fontSize: 14, marginTop: 5, color: "#228B22" }}>
+                  (Popular product)
+                </div>
+              )} */}
+
+              <TextField
+                type="number"
+                value={this.state.quantity}
+                style={{ marginLeft: 20, marginBottom: 10, width: 30, fontSize: ".3em",}}
+                label="Quantity"
+                inputProps={{ min: 1, max: 10, step: 1 }}
+                onChange={e => {
+                  this.setState({ quantity: parseInt(e.target.value) });
+                }}
+              />
+              
+              <Button
+                style={{ 
+                  fontSize: ".8em",
+                  marginLeft: 30
+                }}
+                color="primary"
+                variant="outlined"
+                onClick={() => {
+                  this.props.dispatch(
+                    addItemInCart({
+                      ...this.state.item,
+                      quantity: this.state.quantity
+                    })
+                  );
+                }}
+              >
+                Add to Cart <AddShoppingCartIcon style={{ marginLeft: 5 }} />
+              </Button>
+            </div>
+          </div>
+
+          <br/><br/><hr/>
+          {/* Relateditems */}
+          <div
+            style={{
+              marginTop: 20,
+              marginBottom: 10,
+              fontSize: ".8em"
+            }}
+          >
+            Related Items
           </div>
         </div>
-
-        {/* Relateditems */}
-        <div
-          style={{
-            marginTop: 20,
-            marginBottom: 10,
-            fontSize: "1em"
-          }}
-        >
-          Related Items
+        <div>
+          {
+            this.state.relatedItems.slice(0, 3).map(x => {
+              return <Item key={x.id} item={x} />;
+            })
+          }
         </div>
-        {
-          this.state.relatedItems.slice(0, 3).map(x => {
-            return <Item key={x.id} item={x} />;
-          })
-        }
-      </div >
+        <br/>
+      </div>
     );
   }
 }

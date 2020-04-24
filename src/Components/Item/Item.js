@@ -14,67 +14,67 @@ import Button from "@material-ui/core/Button";
 
 class ConnectedItem extends Component {
   render() {
-    return (
-      <Card
-        style={{ width: 355, height: 280, margin: 10, display: "inline-block" }}
-      >
-        <CardActionArea
-          onClick={() => {
-            this.props.history.push("/details/" + this.props.item.id);
-          }}
+    return (       
+        <Card
+          style={{ width: 355, height: 280, margin: 10, display: "inline-block" }}
         >
-          <CardMedia
-            style={{ height: 140 }}
-            image={this.props.item.imageUrls[0]}
-          />
-          <CardContent style={{ height: 50 }}>
-            <div
-              style={{
-                marginLeft: 5,
-                fontWeight: "bold",
-                whiteSpace: "nowrap",
-                overflow: "hidden",
-                textOverflow: "ellipsis"
-              }}
-            >
-              {this.props.item.name}
-            </div>
-            <div style={{ margin: 5 }}>Price: £ {this.props.item.price}</div>
-            <div style={{ color: "#1a9349", fontWeight: "bold", margin: 5 }}>
-              {this.props.item.popular && "Popular"}
-            </div>
-          </CardContent>
-        </CardActionArea>
-        <CardActions
-          style={{ display: "flex", alignItems: "center", height: 45 }}
-        >
-          <Button
-            size="small"
-            style={{ marginRight: 60 }}
+          <CardActionArea
             onClick={() => {
               this.props.history.push("/details/" + this.props.item.id);
             }}
           >
-            {" "}
-            Details
-          </Button>
-          <Tooltip title="Add to cart">
-            <IconButton
+            <CardMedia
+              style={{ height: 140 }}
+              image={this.props.item.imageUrls[0]}
+            />
+            <CardContent style={{ height: 50 }}>
+              <div
+                style={{
+                  marginLeft: 5,
+                  fontWeight: "bold",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis"
+                }}
+              >
+                {this.props.item.name}
+              </div>
+              <div style={{ margin: 5 }}>Price: £ {this.props.item.price}</div>
+              <div style={{ color: "#1a9349", fontWeight: "bold", margin: 5 }}>
+                {this.props.item.popular && "Popular"}
+              </div>
+            </CardContent>
+          </CardActionArea>
+          <CardActions
+            style={{ display: "flex", alignItems: "center", height: 45 }}
+          >
+            <Button
               size="small"
-              onClick={e => {
-                e.stopPropagation();
-                this.props.dispatch(
-                  addItemInCart({ ...this.props.item, quantity: 1 })
-                );
+              style={{ marginRight: 60 }}
+              onClick={() => {
+                this.props.history.push("/details/" + this.props.item.id);
               }}
-              color="primary"
-              aria-label="Add to shopping cart"
             >
-              <AddShoppingCartIcon size="small" />
-            </IconButton>
-          </Tooltip>
-        </CardActions>
-      </Card>
+              {" "}
+              Details
+            </Button>
+            <Tooltip title="Add to cart">
+              <IconButton
+                size="small"
+                onClick={e => {
+                  e.stopPropagation();
+                  this.props.dispatch(
+                    addItemInCart({ ...this.props.item, quantity: 1 })
+                  );
+                }}
+                color="primary"
+                aria-label="Add to shopping cart"
+              >
+                <AddShoppingCartIcon size="small" />
+              </IconButton>
+            </Tooltip>
+          </CardActions>
+        </Card>
     );
   }
 }
