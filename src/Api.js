@@ -58,7 +58,7 @@ class Api {
             return item.popular;
           }
 
-          if (category !== "All categories" && category !== item.category)
+          if (category !== "All Items" && category !== item.category)
             return false;
 
           if (term && !item.name.toLowerCase().includes(term.toLowerCase()))

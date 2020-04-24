@@ -63,7 +63,7 @@ const sampleProducts = [
 // List of item categories.
 const categories = [
   {
-    name: "All categories",
+    name: "All Items",
     icon: "list"
   },
   {
