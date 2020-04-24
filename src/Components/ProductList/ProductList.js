@@ -101,7 +101,6 @@ class ProductList extends Component {
           </div>
           : 
           <div>
-            <Banner/>
             <Categories/>
           </div>
         }
