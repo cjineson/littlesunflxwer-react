@@ -24,7 +24,6 @@ class ConnectedMenu extends Component {
     super(props);
 
     this.state = {
-      // initially item with id 1 is expanded
       expandedMenuItems: {
         1: true
       },
@@ -121,7 +120,7 @@ class ConnectedMenu extends Component {
     return (
       <div style={{
         backgroundColor: "#FAFAFB",
-        minWidth: 250
+        minWidth: 150
       }}>
         {/* Render our menu */}
         {this.renderMenu(this.state.dataForTheMenu)}

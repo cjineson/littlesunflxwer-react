@@ -63,23 +63,27 @@ const sampleProducts = [
 // List of item categories.
 const categories = [
   {
-    name: "All categories",
-    icon: "list"
-  },
-  {
     name: "Hair Clips",
-    icon: "group"
-  },
-  {
-    name: "Hats",
+    imageUrl: "/images/clips_4.jpg",
+    desc: "Hand-made crocheted hair clips in a variety of styles and colours - Lots of flower styles & custom colours available!",
     icon: "group"
   },
   {
     name: "Bags",
+    imageUrl:  "/images/bag_1.jpg",
+    desc: "Hand-made crocheted backpacks - Lots of flower styles & custom colours available!",
     icon: "group"
   },
   {
     name: "Blankets",
+    imageUrl: "/images/blanket_1.jpg",
+    desc: "Hand-made crocheted blankets in a variety of sizes and colours",
+    icon: "group"
+  },
+  {
+    name: "Hats",
+    imageUrl: "/images/bag_hat_1.jpg",
+    desc: "Hand-made crocheted hats in a range of colours",
     icon: "group"
   }
 ];
@@ -88,7 +92,7 @@ const categories = [
 const dataForTheMenu = [
   { name: "Home", url: "/", icon: "home", id: 0 },
   {
-    name: "Product categories",
+    name: "Products",
     id: 1,
     children: categories.map((x, i) => {
       return {

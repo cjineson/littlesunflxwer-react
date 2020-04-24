@@ -16,7 +16,7 @@ class ConnectedItem extends Component {
   render() {
     return (
       <Card
-        style={{ width: 200, height: 270, margin: 10, display: "inline-block" }}
+        style={{ width: 355, height: 280, margin: 10, display: "inline-block" }}
       >
         <CardActionArea
           onClick={() => {
