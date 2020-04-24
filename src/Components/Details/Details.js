@@ -90,7 +90,7 @@ class ConnectedDetails extends Component {
           <div>
             
             {this.state.item.imageUrls.map((value, index) => {
-              return <img key={index} src={this.state.item.imageUrls[index]} alt="" width={250} height={250}
+              return <img key={index} src={this.state.item.imageUrls[index]} alt="" width={295}
                 style={{
                   border: "1px solid lightgray",
                   marginRight: "30px",
@@ -118,7 +118,7 @@ class ConnectedDetails extends Component {
               marginBottom: 25
             }}
           >
-            {this.state.item.description ? this.state.item.description : "Not available"}
+            {this.state.item.description ? this.state.item.description : ""}
           </div>
 
             <div
