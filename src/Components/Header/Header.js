@@ -13,7 +13,8 @@ import {
   toggleMenu,
   logout
 } from "../../Redux/Actions";
-import cartImage from "../../Images/logo2.png";
+import logo from "../../images/logo.jpg";
+import bee from "../../images/bee.jpg";
 import Auth from "../../Auth";
 import { categories } from "../../Data";
 import Person from "@material-ui/icons/PersonOutline";
@@ -65,12 +66,16 @@ class ConnectedHeader extends Component {
               <MenuIcon size="medium" />
             </IconButton>
 
-            <img
-              src={cartImage}
-              alt={"Logo"}
-              style={{ marginLeft: 10 }}
-
-            />
+            <a href="/">
+              <img
+                src={logo}
+                alt={"Logo"}
+                style={{ marginLeft: 10, height: "35px"}}
+              />
+            </a>
+            
+            {/* <a href="/" style={{ textDecoration: "none", fontSize: "1em"}}><p style={{ color: "black" }}><span role="img" aria-label="sunflower">🌻</span>&nbsp;&nbsp;Little Sunflxwer</p></a> */}
+{/* 
             <TextField
               label="Search products"
               value={this.state.searchTerm}
@@ -110,10 +115,10 @@ class ConnectedHeader extends Component {
             >
               {" "}
               Search
-            </Button>
+            </Button> */}
           </div>
           <div className="right-part">
-            {!this.props.loggedInUser ? (
+            {/* {!this.props.loggedInUser ? (
               <Button
                 variant="outlined"
                 style={{ marginRight: 20 }}
@@ -133,7 +138,8 @@ class ConnectedHeader extends Component {
                 >
                   <Person />
                 </Avatar>
-              )}
+              )} */}
+
             <IconButton
               aria-label="Cart"
               onClick={() => {
@@ -144,6 +150,13 @@ class ConnectedHeader extends Component {
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
+            
+            <img
+                src={bee}
+                alt={"Bee"}
+                style={{ marginLeft: 10, height: "35px"}}
+            />
+
             <Menu
               anchorEl={anchorEl}
               open={Boolean(anchorEl)}

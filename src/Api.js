@@ -29,7 +29,7 @@ class Api {
   }
 
   searchItems({
-    category = "popular",
+    category = "",
     term = "",
     sortValue = "lh",
     itemsPerPage = 10,

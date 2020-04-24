@@ -7,7 +7,6 @@ import Api from "../../Api";
 import Item from "../Item/Item";
 import { connect } from "react-redux";
 import TextField from "@material-ui/core/TextField";
-import Paper from '@material-ui/core/Paper';
 
 
 
@@ -76,114 +75,118 @@ class ConnectedDetails extends Component {
     }
 
     return (
-      <div style={{ padding: 10 }}>
-        <div
-          style={{
-            marginBottom: 20,
-            marginTop: 10,
-            fontSize: 22
-          }}
-        >
-          {this.state.item.name}
-        </div>
-        
-        <div style={{ display: "flex" }}>
-          
-          {this.state.item.imageUrls.map((value, index) => {
-            return <img key={index} src={this.state.item.imageUrls[index]} alt="" width={250} height={250}
-              style={{
-                border: "1px solid lightgray",
-                marginRight: "30px",
-                borderRadius: "5px",
-                objectFit: "cover"
-              }} />
-          })}
-
+      <div>
+        <div style={{ padding: 10 }}>
           <div
             style={{
-              flex: 1,
-              marginLeft: 20,
-              display: "flex",
-              flexDirection: "column"
+              marginBottom: 20,
+              marginTop: 10,
+              fontSize: "1em"
             }}
           >
+            {this.state.item.name}
+          </div>
+          
 
-            <div style={{
-              fontSize: 16,
+          {/* Product description */} 
+          <div
+            style={{
+              maxHeight: 200,
+              fontSize: 13,
+              overflow: "auto",
+              marginBottom: 25
+            }}
+          >
+            {this.state.item.description ? this.state.item.description : ""}
+          </div>
 
-            }}>
-              Price: £ {this.state.item.price}
-            </div>
-            {this.state.item.popular && (
-              <div style={{ fontSize: 14, marginTop: 5, color: "#228B22" }}>
-                (Popular product)
-              </div>
-            )}
+          <div>
+            {this.state.item.imageUrls.map((value, index) => {
+              return <img key={index} src={this.state.item.imageUrls[index]} alt="" width={295}
+                style={{
+                  border: "1px solid lightgray",
+                  marginRight: "30px",
+                  marginBottom: "30px",
+                  borderRadius: "5px",
+                  objectFit: "cover"
+                }} />
+            })}
 
-            <TextField
-              type="number"
-              value={this.state.quantity}
-              style={{ marginTop: 20, marginBottom: 10, width: 70 }}
-              label="Quantity"
-              inputProps={{ min: 1, max: 10, step: 1 }}
-              onChange={e => {
-                this.setState({ quantity: parseInt(e.target.value) });
-              }}
-            />
-            <Button
-              style={{ width: 170, marginTop: 5 }}
-              color="primary"
-              variant="outlined"
-              onClick={() => {
-                this.props.dispatch(
-                  addItemInCart({
-                    ...this.state.item,
-                    quantity: this.state.quantity
-                  })
-                );
+            <div
+              style={{
+                flex: 1,
+                marginLeft: 20,
+                display: "flex",
+                flexDirection: "row"
               }}
             >
-              Add to Cart <AddShoppingCartIcon style={{ marginLeft: 5 }} />
-            </Button>
+
+              <div style={{
+                fontSize: "1.5em",
+                marginTop: "10px"
+              }}>
+                £{this.state.item.price}
+              </div>
+
+              {/* {this.state.item.popular && (
+                <div style={{ fontSize: 14, marginTop: 5, color: "#228B22" }}>
+                  (Popular product)
+                </div>
+              )} */}
+
+              <TextField
+                type="number"
+                value={this.state.quantity}
+                style={{ marginLeft: 20, marginBottom: 10, width: 30, fontSize: ".3em",}}
+                label="Quantity"
+                inputProps={{ min: 1, max: 10, step: 1 }}
+                onChange={e => {
+                  this.setState({ quantity: parseInt(e.target.value) });
+                }}
+              />
+              
+              <Button
+                style={{ 
+                  fontSize: ".8em",
+                  marginLeft: 30
+                }}
+                color="primary"
+                variant="outlined"
+                onClick={() => {
+                  this.props.dispatch(
+                    addItemInCart({
+                      ...this.state.item,
+                      quantity: this.state.quantity
+                    })
+                  );
+                }}
+              >
+                Add to Cart <AddShoppingCartIcon style={{ marginLeft: 5 }} />
+              </Button>
+            </div>
+          </div>
+
+          <br/><br/><hr/>
+          {/* Relateditems */}
+          <div
+            style={{
+              marginTop: 20,
+              marginBottom: 10,
+              fontSize: ".8em"
+            }}
+          >
+            Related Items
           </div>
         </div>
-
-        {/* Product description */}
-        <div
-          style={{
-            marginTop: 20,
-            marginBottom: 20,
-            fontSize: 22
-          }}
-        >
-          Product Description
+        <div>
+          {
+            this.state.relatedItems.slice(0, 3).map(x => {
+              return <Item key={x.id} item={x} />;
+            })
+          }
         </div>
-        <div
-          style={{
-            maxHeight: 200,
-            fontSize: 13,
-            overflow: "auto"
-          }}
-        >
-          {this.state.item.description ? this.state.item.description : "Not available"}
-        </div>
-
-        {/* Relateditems */}
-        <div
-          style={{
-            marginTop: 20,
-            marginBottom: 10,
-            fontSize: 22
-          }}
-        >
-          Related Items
-        </div>
-        {
-          this.state.relatedItems.slice(0, 3).map(x => {
-            return <Item key={x.id} item={x} />;
-          })
-        }
-      </div >
+        <br/>
+      </div>
     );
   }
 }

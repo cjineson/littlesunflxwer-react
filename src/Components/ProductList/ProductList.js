@@ -5,7 +5,8 @@ import queryString from "query-string";
 import Api from "../../Api";
 import Paging from "../Paging/Paging";
 import ProductsHeader from "../ProductsHeader/ProductsHeader"
-
+import Banner from "../Banner/Banner"
+import Categories from "../Categories/Categories"
 
 // This component is responsible for fetching products. It determines from query string which products to fetch.
 // The URL is checked on initial mount and when URL changes.
@@ -69,6 +70,8 @@ class ProductList extends Component {
 
   render() {
     let parsedQS = queryString.parse(this.props.location.search);
+    let category = parsedQS.category;
+
 
     if (this.state.loading) {
       return (
@@ -78,22 +81,29 @@ class ProductList extends Component {
 
     return (
       <div style={{ height: "100%", display: "flex", flexDirection: "column" }}>
-        <ProductsHeader
-          parsedQS={parsedQS}
-          updateQueryString={this.updateQueryString}
-          totalItemsCount={this.state.totalItemsCount} />
-
-        <div style={{ flex: 1 }}>
-          {this.state.items.map(item => {
-            return <Item key={item.id} item={item} />;
-          })}
-        </div>
-
-        <Paging
-          parsedQS={parsedQS}
-          updateQueryString={this.updateQueryString}
-          totalItemsCount={this.state.totalItemsCount}
-        />
+   
+        {category ?
+          <div>
+            <ProductsHeader
+              parsedQS={parsedQS}
+              updateQueryString={this.updateQueryString}
+              totalItemsCount={this.state.totalItemsCount} />
+            <div style={{ flex: 1 }}>
+              {this.state.items.map(item => {
+                return <Item key={item.id} item={item} />;
+              })}
+            </div>
+            <Paging
+              parsedQS={parsedQS}
+              updateQueryString={this.updateQueryString}
+              totalItemsCount={this.state.totalItemsCount}
+            />
+          </div>
+          : 
+          <div>
+            <Categories/>
+          </div>
+        }
       </div >
     );
   }
