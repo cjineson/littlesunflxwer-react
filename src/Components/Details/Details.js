@@ -87,29 +87,8 @@ class ConnectedDetails extends Component {
             {this.state.item.name}
           </div>
           
-          <div>
-            
-            {this.state.item.imageUrls.map((value, index) => {
-              return <img key={index} src={this.state.item.imageUrls[index]} alt="" width={295}
-                style={{
-                  border: "1px solid lightgray",
-                  marginRight: "30px",
-                  marginBottom: "30px",
-                  borderRadius: "5px",
-                  objectFit: "cover"
-                }} />
-            })}
 
-          {/* Product description */}
-          <div
-            style={{
-              marginTop: 20,
-              marginBottom: 20,
-              fontSize: "1em"
-            }}
-          >
-            {/* Product Description */}
-          </div>
+          {/* Product description */} 
           <div
             style={{
               maxHeight: 200,
@@ -120,6 +99,18 @@ class ConnectedDetails extends Component {
           >
             {this.state.item.description ? this.state.item.description : ""}
           </div>
+
+          <div>
+            {this.state.item.imageUrls.map((value, index) => {
+              return <img key={index} src={this.state.item.imageUrls[index]} alt="" width={295}
+                style={{
+                  border: "1px solid lightgray",
+                  marginRight: "30px",
+                  marginBottom: "30px",
+                  borderRadius: "5px",
+                  objectFit: "cover"
+                }} />
+            })}
 
             <div
               style={{
