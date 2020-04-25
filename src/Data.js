@@ -120,19 +120,29 @@ const sampleProducts = [
       "/images/earring_2.jpg"
     ]
   },
+  {
+    id: 11,
+    name: "Sunshine Earrings",
+    category: "Earrings",
+    price: 8,
+    popular: true,
+    imageUrls: [
+      "/images/earring_5.jpg"
+    ]
+  },
 ];
 
 // List of item categories.
 const categories = [
   {
     name: "Hair Clips",
-    imageUrl: "/images/clips_4.jpg",
+    imageUrl: "/images/clips_1.jpg",
     desc: "Hand-made crocheted hair clips in a variety of styles and colours - Lots of flower styles & custom colours available!",
     icon: "group"
   },  
   {
     name: "Earrings",
-    imageUrl: "/images/earring_1.jpg",
+    imageUrl: "/images/earring_3.jpg",
     desc: "Hand-made crocheted flower earrings in a range of colours",
     icon: "group"
   },
