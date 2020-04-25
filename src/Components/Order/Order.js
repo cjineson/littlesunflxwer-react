@@ -8,7 +8,6 @@ import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import { setCheckedOutItems } from "../../Redux/Actions";
-import StripeCheckout from 'react-stripe-checkout';
 
 const mapStateToProps = state => {
   return {
@@ -59,9 +58,7 @@ class ConnectedOrder extends Component {
         >
           Total price: £ {totalPrice}
         </div>
-
-
-        {/* <Button
+        <Button
           color="primary"
           variant="outlined"
           disabled={totalPrice === 0}
@@ -71,11 +68,7 @@ class ConnectedOrder extends Component {
           style={{ margin: 5, marginTop: 30 }}
         >
           Purchase
-        </Button> */}
-
-
-
-
+        </Button>
         <Button
           color="secondary"
           variant="outlined"
