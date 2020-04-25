@@ -104,7 +104,7 @@ const sampleProducts = [
     id: 9,
     name: "Sunflower Earrings",
     category: "Earrings",
-    price: 10,
+    price: 8,
     popular: true,
     imageUrls: [
       "/images/earring_1.jpg"
@@ -114,7 +114,7 @@ const sampleProducts = [
     id: 10,
     name: "Daisy Earrings",
     category: "Earrings",
-    price: 10,
+    price: 8,
     popular: true,
     imageUrls: [
       "/images/earring_2.jpg"
