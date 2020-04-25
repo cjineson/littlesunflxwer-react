@@ -77,10 +77,10 @@ class Footer extends Component {
           <div className="footerHead"
             style={{ color: "#504F5A", fontWeight: "bold" }}
           >
-            Social Media
+            Other Sites
           </div>
           <a
-            href="http://www.facebook.com"
+            href="https://www.facebook.com/littlesunflxwer/"
             target="blank"
             style={{
               textDecoration: "none",
@@ -88,6 +88,16 @@ class Footer extends Component {
             }}
           >
             <div className="footerItem">Facebook</div>
+          </a>
+          <a
+            href="https://www.etsy.com/uk/shop/littlesunflxwer"
+            target="blank"
+            style={{
+              textDecoration: "none",
+              color: "rgb(32, 32, 34)"
+            }}
+          >
+            <div className="footerItem">Etsy</div>
           </a>
         </div>
         <div className="footerImg">
