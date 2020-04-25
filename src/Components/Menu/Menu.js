@@ -120,7 +120,7 @@ class ConnectedMenu extends Component {
     return (
       <div style={{
         backgroundColor: "#FAFAFB",
-        minWidth: 150
+        minWidth: 170
       }}>
         {/* Render our menu */}
         {this.renderMenu(this.state.dataForTheMenu)}
