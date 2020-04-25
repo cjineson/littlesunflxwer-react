@@ -26,6 +26,18 @@ const sampleProducts = [
     ]
   },
   {
+    id: 2,
+    name: "Daffodil Hair Clips",
+    category: "Hair Clips",
+    price: 6,
+    description:
+      "Pair of Daffodil Hair Clips",
+    popular: true,
+    imageUrls: [
+      "/images/clips_5.jpg"
+    ]
+  },
+  {
     id: 3,
     name: "Blanket",
     category: "Blankets",
@@ -50,12 +62,62 @@ const sampleProducts = [
   },
   {
     id: 5,
-    name: "Hat",
+    name: "Sunflower Hat",
     category: "Hats",
     price: 15,
     popular: true,
     imageUrls: [
-      "/images/bag_hat_1.jpg"
+      "/images/hat_4.jpg"
+    ]
+  },
+  {
+    id: 6,
+    name: "Swirl Hat",
+    category: "Hats",
+    price: 15,
+    popular: true,
+    imageUrls: [
+      "/images/hat_6.jpg"
+    ]
+  },  
+  {
+    id: 7,
+    name: "Daisy Hat",
+    category: "Hats",
+    price: 15,
+    popular: true,
+    imageUrls: [
+      "/images/hat_3.jpg"
+    ]
+  },
+  {
+    id: 8,
+    name: "Heart Hat",
+    category: "Hats",
+    price: 15,
+    popular: true,
+    imageUrls: [
+      "/images/hat_5.jpg"
+    ]
+  },
+  {
+    id: 9,
+    name: "Sunflower Earrings",
+    category: "Earrings",
+    price: 10,
+    popular: true,
+    imageUrls: [
+      "/images/earring_1.jpg"
+    ]
+  },
+  {
+    id: 10,
+    name: "Daisy Earrings",
+    category: "Earrings",
+    price: 10,
+    popular: true,
+    imageUrls: [
+      "/images/earring_2.jpg"
     ]
   },
 ];
@@ -66,6 +128,18 @@ const categories = [
     name: "Hair Clips",
     imageUrl: "/images/clips_4.jpg",
     desc: "Hand-made crocheted hair clips in a variety of styles and colours - Lots of flower styles & custom colours available!",
+    icon: "group"
+  },  
+  {
+    name: "Earrings",
+    imageUrl: "/images/earring_1.jpg",
+    desc: "Hand-made crocheted flower earrings in a range of colours",
+    icon: "group"
+  },
+  {
+    name: "Hats",
+    imageUrl: "/images/bag_hat_1.jpg",
+    desc: "Hand-made crocheted hats in a range of colours",
     icon: "group"
   },
   {
@@ -80,12 +154,6 @@ const categories = [
     desc: "Hand-made crocheted blankets in a variety of sizes and colours",
     icon: "group"
   },
-  {
-    name: "Hats",
-    imageUrl: "/images/bag_hat_1.jpg",
-    desc: "Hand-made crocheted hats in a range of colours",
-    icon: "group"
-  }
 ];
 
 // Data for rendering menu.
