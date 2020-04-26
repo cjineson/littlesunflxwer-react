@@ -15,7 +15,7 @@ class Categories extends Component {
             <div style={{ flex: 1, flexDirection: "row"}}>
                 {categories.map(item => {
                     return (
-                        <Card style={{ width: 355, margin: 10, display: "inline-block" }}>
+                        <Card style={{ width: 355, minHeight: 250,  margin: 10, display: "inline-block" }}>
                         <CardActionArea
                         onClick={() => {
                             this.props.history.push("/?category=" + item.name,);
