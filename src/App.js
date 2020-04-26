@@ -5,6 +5,7 @@ import ProductList from "./Components/ProductList/ProductList";
 import { Switch, Route } from "react-router-dom";
 import Menu from "./Components/Menu/Menu";
 import CartDialog from "./Components/CartDialog/CartDialog";
+import Checkout from "./Components/Checkout/Checkout";
 import Details from "./Components/Details/Details";
 import Order from "./Components/Order/Order";
 import Login from "./Components/Login/Login";
@@ -20,11 +21,12 @@ class App extends Component {
           <Menu />
           <div className="content">
             <CartDialog />
+            <Checkout />
             <Switch>
               <Route path="/" exact component={ProductList} />
               <Route path="/details/:id" component={Details} />
               <Route path="/login" component={Login} />
-              <ProtectedRoute path="/order" component={Order} />
+              <Route path="/order" component={Order} />
               <Route
                 component={() => (
                   <div style={{ padding: 20 }}>Page not found</div>

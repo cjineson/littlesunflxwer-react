@@ -2,12 +2,19 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import Badge from "@material-ui/core/Badge";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import { setCheckedOutItems } from "../../Redux/Actions";
+import {
+  showPayDialog,
+} from "../../Redux/Actions";
+import Toolbar from "@material-ui/core/Toolbar";
 
 const mapStateToProps = state => {
   return {
@@ -80,6 +87,23 @@ class ConnectedOrder extends Component {
         >
           Discard
         </Button>
+      
+      <Toolbar>
+        <IconButton
+              aria-label="Cart"
+              onClick={() => {
+                console.log('clicked pay')
+                console.log(this.props.dispatch(showPayDialog(true)));
+                this.props.dispatch(showPayDialog(true));
+                console.log(this.props);
+
+              }}
+            >
+            <Badge badgeContent={this.props.nrOfItemsInCard} color="primary">
+              <ShoppingCartIcon />
+              </Badge>
+            </IconButton>
+      </Toolbar>
       </div>
     );
   }

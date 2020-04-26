@@ -2,7 +2,7 @@ import React from "react";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import {
-  showCartDlg,
+  showCartDialog,
   deleteCartItem,
   updateCartItemQnt
 } from "../../Redux/Actions";
@@ -18,7 +18,7 @@ const CartRow = props => {
         <Link to={`/details/${item.id}`}>
           <div
             onClick={() => {
-              props.dispatch(showCartDlg(false));
+              props.dispatch(showCartDialog(false));
             }}
           >
             {item.name}

@@ -9,7 +9,7 @@ import Button from "@material-ui/core/Button";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import {
-  showCartDlg,
+  showCartDialog,
   toggleMenu,
   logout
 } from "../../Redux/Actions";
@@ -143,7 +143,7 @@ class ConnectedHeader extends Component {
             <IconButton
               aria-label="Cart"
               onClick={() => {
-                this.props.dispatch(showCartDlg(true));
+                this.props.dispatch(showCartDialog(true));
               }}
             >
               <Badge badgeContent={this.props.nrOfItemsInCard} color="primary">

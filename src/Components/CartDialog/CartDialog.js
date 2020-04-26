@@ -7,7 +7,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import { connect } from "react-redux";
-import { showCartDlg, setCheckedOutItems } from "../../Redux/Actions";
+import { showCartDialog, setCheckedOutItems } from "../../Redux/Actions";
 import { withRouter } from "react-router-dom";
 import CartRow from "./CartRow";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCartOutlined";
@@ -29,7 +29,7 @@ class ConnectedCartDialog extends Component {
         <Dialog
           open={this.props.open}
           onClose={() => {
-            this.props.dispatch(showCartDlg(false));
+            this.props.dispatch(showCartDialog(false));
           }}
         >
           <AppBar position="static" style={{ backgroundColor: "#3863aa" }}>
@@ -80,7 +80,7 @@ class ConnectedCartDialog extends Component {
               color="primary"
               disabled={totalPrice === 0}
               onClick={() => {
-                this.props.dispatch(showCartDlg(false));
+                this.props.dispatch(showCartDialog(false));
                 this.props.dispatch(setCheckedOutItems(this.props.items));
                 this.props.history.push("/order");
               }}

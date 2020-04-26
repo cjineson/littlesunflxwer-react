@@ -4,7 +4,11 @@ export const addItemInCart = item => ({
   type: CONSTANTS.ADD_ITEM_IN_CART,
   payload: item
 });
-export const showCartDlg = status => ({
+export const showPayDialog = status => ({
+  type: CONSTANTS.SHOW_PAY_DLG,
+  payload: status
+});
+export const showCartDialog = status => ({
   type: CONSTANTS.SHOW_CART_DLG,
   payload: status
 });
