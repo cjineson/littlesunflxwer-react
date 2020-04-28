@@ -23,8 +23,7 @@ class App extends Component {
             <Switch>
               <Route path="/" exact component={ProductList} />
               <Route path="/details/:id" component={Details} />
-              <Route path="/login" component={Login} />
-              <ProtectedRoute path="/order" component={Order} />
+              <Route path="/order" component={Order} />
               <Route
                 component={() => (
                   <div style={{ padding: 20 }}>Page not found</div>
