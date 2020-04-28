@@ -4,9 +4,10 @@ import * as CONSTANTS from "./Constants";
 const initialState = {
   cartItems: [],
   showCartDialog: false,
-  showPreDialog: false,
+  showPreDialog: true,
   showMenu: false,
   checkedOutItems: [],
+  customerEmail: '',
   loggedInUser: null
 };
 
