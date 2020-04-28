@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Button from "@material-ui/core/Button";
-import Tooltip from "@material-ui/core/Tooltip";
+// import Button from "@material-ui/core/Button";
+// import Tooltip from "@material-ui/core/Tooltip";
 import PriceDialog from "../PriceDialog/PriceDialog";
-import MenuItem from "@material-ui/core/MenuItem";
-import Select from "@material-ui/core/Select";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
+// import MenuItem from "@material-ui/core/MenuItem";
+// import Select from "@material-ui/core/Select";
+// import FormControlLabel from "@material-ui/core/FormControlLabel";
+// import Checkbox from "@material-ui/core/Checkbox";
 import { withRouter } from "react-router-dom";
 
 class ProductsHeader extends Component {
@@ -17,10 +17,10 @@ class ProductsHeader extends Component {
     let { parsedQS, totalItemsCount, updateQueryString } = this.props;
   
     // Grab some values from the query string
-    let usePriceFilter = parsedQS.usePriceFilter === "true";
+    // let usePriceFilter = parsedQS.usePriceFilter === "true";
     let minPrice = parsedQS.minPrice || 0;
     let maxPrice = parsedQS.maxPrice || 1000;
-    let sortValue = parsedQS.sortValue || "lh";
+    // let sortValue = parsedQS.sortValue || "lh";
     let keyword = parsedQS.term;
     let category = parsedQS.category;
 

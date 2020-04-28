@@ -5,7 +5,7 @@ import queryString from "query-string";
 import Api from "../../Api";
 import Paging from "../Paging/Paging";
 import ProductsHeader from "../ProductsHeader/ProductsHeader"
-import Banner from "../Banner/Banner"
+// import Banner from "../Banner/Banner"
 import Categories from "../Categories/Categories"
 
 // This component is responsible for fetching products. It determines from query string which products to fetch.

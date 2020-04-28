@@ -11,12 +11,27 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Tooltip from "@material-ui/core/Tooltip";
 import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
 
 class ConnectedItem extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.isCompMounted = false;
+
+    this.state = {
+      relatedItems: [],
+      quantity: 1,
+      item: null,
+      itemLoading: false
+    };
+  }
+
   render() {
     return (       
         <Card
-          style={{ width: 355, height: 280, margin: 10, display: "inline-block" }}
+          style={{ width: 355, height: 400, margin: 10, display: "inline-block" }}
         >
           <CardActionArea
             onClick={() => {
@@ -24,7 +39,7 @@ class ConnectedItem extends Component {
             }}
           >
             <CardMedia
-              style={{ height: 140 }}
+              style={{ height: 250 }}
               image={this.props.item.imageUrls[0]}
             />
             <CardContent style={{ height: 50 }}>
@@ -58,6 +73,19 @@ class ConnectedItem extends Component {
               {" "}
               Details
             </Button>
+
+            <TextField
+                type="number"
+                value={this.state.quantity}
+                style={{ marginLeft: 20, marginBottom: 10, width: 30, fontSize: ".3em",}}
+                label="Quantity"
+                inputProps={{ min: 1, max: 10, step: 1 }}
+                onChange={e => {
+                  this.setState({ quantity: parseInt(e.target.value) });
+                }}
+              />
+
+
             <Tooltip title="Add to cart">
               <IconButton
                 size="small"
