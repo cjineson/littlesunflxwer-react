@@ -26,7 +26,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     name: "Daffodil Hair Clips",
     category: "Hair Clips",
     price: 6,
@@ -38,7 +38,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     name: "Blanket",
     category: "Blankets",
     price: 30,
@@ -51,7 +51,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     name: "Backpack",
     category: "Bags",
     price: 20,
@@ -61,7 +61,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     name: "Sunflower Hat",
     category: "Hats",
     price: 15,
@@ -71,7 +71,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     name: "Swirl Hat",
     category: "Hats",
     price: 15,
@@ -81,7 +81,7 @@ const sampleProducts = [
     ]
   },  
   {
-    id: 7,
+    id: 8,
     name: "Daisy Hat",
     category: "Hats",
     price: 15,
@@ -91,7 +91,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 8,
+    id: 9,
     name: "Heart Hat",
     category: "Hats",
     price: 15,
@@ -101,23 +101,36 @@ const sampleProducts = [
     ]
   },
   {
-    id: 9,
+    id: 10,
     name: "Sunflower Earrings",
     category: "Earrings",
     price: 8,
     popular: true,
     imageUrls: [
+     "/images/earring_4.jpg",
       "/images/earring_1.jpg"
+
     ]
   },
   {
-    id: 10,
+    id: 11,
     name: "Daisy Earrings",
     category: "Earrings",
     price: 8,
     popular: true,
     imageUrls: [
+      "/images/earring_6.jpg",
       "/images/earring_2.jpg"
+    ]
+  },
+  {
+    id: 12,
+    name: "Sunshine Earrings",
+    category: "Earrings",
+    price: 8,
+    popular: true,
+    imageUrls: [
+      "/images/earring_5.jpg"
     ]
   },
 ];
@@ -126,13 +139,13 @@ const sampleProducts = [
 const categories = [
   {
     name: "Hair Clips",
-    imageUrl: "/images/clips_4.jpg",
+    imageUrl: "/images/clips_1.jpg",
     desc: "Hand-made crocheted hair clips in a variety of styles and colours - Lots of flower styles & custom colours available!",
     icon: "group"
   },  
   {
     name: "Earrings",
-    imageUrl: "/images/earring_1.jpg",
+    imageUrl: "/images/earring_3.jpg",
     desc: "Hand-made crocheted flower earrings in a range of colours",
     icon: "group"
   },
