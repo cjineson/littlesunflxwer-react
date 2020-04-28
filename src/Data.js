@@ -107,7 +107,9 @@ const sampleProducts = [
     price: 8,
     popular: true,
     imageUrls: [
+     "/images/earring_4.jpg",
       "/images/earring_1.jpg"
+
     ]
   },
   {
@@ -117,6 +119,7 @@ const sampleProducts = [
     price: 8,
     popular: true,
     imageUrls: [
+      "/images/earring_6.jpg",
       "/images/earring_2.jpg"
     ]
   },
