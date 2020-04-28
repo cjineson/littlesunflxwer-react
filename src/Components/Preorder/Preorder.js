@@ -18,10 +18,9 @@ class PreOrderForm extends React.Component {
     };
 
     render() {
-        const { open } = this.props;
         return (
             <Dialog
-                open={open}
+                open={this.props.open}
                 onClose={() => {
                     this.props.dispatch(showPreDialog(false));
                 }}
