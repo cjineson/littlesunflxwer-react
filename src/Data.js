@@ -26,7 +26,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     name: "Daffodil Hair Clips",
     category: "Hair Clips",
     price: 6,
@@ -38,7 +38,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     name: "Blanket",
     category: "Blankets",
     price: 30,
@@ -51,7 +51,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     name: "Backpack",
     category: "Bags",
     price: 20,
@@ -61,7 +61,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     name: "Sunflower Hat",
     category: "Hats",
     price: 15,
@@ -71,7 +71,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     name: "Swirl Hat",
     category: "Hats",
     price: 15,
@@ -81,7 +81,7 @@ const sampleProducts = [
     ]
   },  
   {
-    id: 7,
+    id: 8,
     name: "Daisy Hat",
     category: "Hats",
     price: 15,
@@ -91,7 +91,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 8,
+    id: 9,
     name: "Heart Hat",
     category: "Hats",
     price: 15,
@@ -101,7 +101,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 9,
+    id: 10,
     name: "Sunflower Earrings",
     category: "Earrings",
     price: 8,
@@ -111,7 +111,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 10,
+    id: 11,
     name: "Daisy Earrings",
     category: "Earrings",
     price: 8,
@@ -121,7 +121,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 11,
+    id: 12,
     name: "Sunshine Earrings",
     category: "Earrings",
     price: 8,
