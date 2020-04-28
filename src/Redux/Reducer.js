@@ -31,6 +31,8 @@ const rootReducer = (state = initialState, action) => {
     }
     case CONSTANTS.SHOW_CART_DLG:
       return { ...state, showCartDialog: action.payload };
+    case CONSTANTS.SHOW_PRE_DLG:
+        return { ...state, showPreDialog: action.payload };      
     case CONSTANTS.DELETE_CART_ITEM:
       return {
         ...state,
