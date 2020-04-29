@@ -8,6 +8,10 @@ export const showCartDlg = status => ({
   type: CONSTANTS.SHOW_CART_DLG,
   payload: status
 });
+export const showPreDialog = status => ({
+  type: CONSTANTS.SHOW_PRE_DLG,
+  payload: status
+});
 export const deleteCartItem = id => ({
   type: CONSTANTS.DELETE_CART_ITEM,
   payload: id
