@@ -7,7 +7,7 @@ import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
-import { setCheckedOutItems } from "../../Redux/Actions";
+import { setCheckedOutItems, showPreDialog } from "../../Redux/Actions";
 
 const mapStateToProps = state => {
   return {
@@ -63,7 +63,7 @@ class ConnectedOrder extends Component {
           variant="outlined"
           disabled={totalPrice === 0}
           onClick={() => {
-            console.log("purchased");
+            this.props.dispatch(showPreDialog(true));
           }}
           style={{ margin: 5, marginTop: 30 }}
         >

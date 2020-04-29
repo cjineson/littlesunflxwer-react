@@ -4,12 +4,10 @@ import * as CONSTANTS from "./Constants";
 const initialState = {
   cartItems: [],
   showCartDialog: false,
-<<<<<<< Updated upstream
-=======
   showPreDialog: false,
->>>>>>> Stashed changes
   showMenu: false,
   checkedOutItems: [],
+  customerEmail: '',
   loggedInUser: null
 };
 
@@ -35,6 +33,8 @@ const rootReducer = (state = initialState, action) => {
     }
     case CONSTANTS.SHOW_CART_DLG:
       return { ...state, showCartDialog: action.payload };
+    case CONSTANTS.SHOW_PRE_DLG:
+        return { ...state, showPreDialog: action.payload };      
     case CONSTANTS.DELETE_CART_ITEM:
       return {
         ...state,

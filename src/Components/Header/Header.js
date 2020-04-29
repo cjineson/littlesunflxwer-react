@@ -4,8 +4,6 @@ import "./Header.css";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Badge from "@material-ui/core/Badge";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import {
@@ -17,11 +15,8 @@ import logo from "../../images/logo.jpg";
 import bee from "../../images/bee.jpg";
 import Auth from "../../Auth";
 import { categories } from "../../Data";
-import Person from "@material-ui/icons/PersonOutline";
-import Avatar from "@material-ui/core/Avatar";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import Select from "@material-ui/core/Select";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 
@@ -33,13 +28,13 @@ const mapStateToProps = state => {
 };
 
 // Option items for product categories.
-const categoryOptions = categories.map(x => {
-  return (
-    <MenuItem key={x.name} value={x.name}>
-      {x.name}
-    </MenuItem>
-  );
-});
+// const categoryOptions = categories.map(x => {
+//   return (
+//     <MenuItem key={x.name} value={x.name}>
+//       {x.name}
+//     </MenuItem>
+//   );
+// });
 
 class ConnectedHeader extends Component {
   state = {
