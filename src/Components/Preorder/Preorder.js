@@ -11,8 +11,14 @@ import sadflower from "../../images/sad-sunflower.png";
 
 
 const mapStateToProps = state => {
-    return { open: state.showPreDialog, customerEmail: state.customerEmail };
+    return { open: state.showPreDialog, customerEmail: state.customerEmail, items: state.cartItems };
 };
+
+const mailBody = (items) => {
+    {items.map((item) => {
+        return <p>item.name</p>;
+     })}
+}
 
 class PreOrderForm extends React.Component {
 
@@ -53,12 +59,17 @@ class PreOrderForm extends React.Component {
                         variant="outlined"
                         color="primary"
                         style={{textDecoration: "none"}}
+                        onClick={() => {
+                            this.props.dispatch(showPreDialog(false));
+                            this.props.history.push("/");
+                        }}
                     > 
+    
                         <Mailto
                             email='sunflxwerlittle@gmail.com'
                             headers={
                                 { subject: 'Pre-Order',
-                                  body: 'yo' }
+                                  body: "Tell us what you'd like to pre-order & we'll be in touch!"}
                             }/>
                     </Button>
                 </div>

@@ -50,7 +50,7 @@ const CartRow = props => {
             props.dispatch(deleteCartItem(item.id));
           }}
         >
-          Delete
+          X
         </Button>
       </TableCell>
     </TableRow>
