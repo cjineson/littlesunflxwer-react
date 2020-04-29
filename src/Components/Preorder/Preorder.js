@@ -5,20 +5,16 @@ import Dialog from "@material-ui/core/Dialog";
 // import { showPreDialog, customerEmail } from "../../Redux/Actions";
 import { showPreDialog } from "../../Redux/Actions";
 import TextField from "@material-ui/core/TextField";
-import Container from '@material-ui/core/Container';
 import Button from "@material-ui/core/Button";
+import Mailto from 'react-protected-mailto';
+import sadflower from "../../images/sad-sunflower.png";
+
 
 const mapStateToProps = state => {
     return { open: state.showPreDialog, customerEmail: state.customerEmail };
 };
 
 class PreOrderForm extends React.Component {
-
-    handleSubmit = async (event) => {
-        // Block native form submission.
-        event.preventDefault();
-        console.log(this.props);
-    };
 
     render() {
         return (
@@ -40,32 +36,31 @@ class PreOrderForm extends React.Component {
                         Sorry! We can't currently take online payments
                         </div>
                     <br />
+                    <img
+                src={sadflower}
+                alt={"Sad Sunflower"}
+                style={{ marginLeft: 10, width: "40%"}}
+              />
+                    <br />
+                    <br />
                     <br />
                     <div>
-                        Please enter your email &amp; we'll be in touch
-                        </div>
-                    <br />
-                    <br />
-                    <TextField
-                        placeholder="Email"
-                        onChange={e => {
-                            // painful redux wrangling here, may be unnecessary
-                            // this.props.dispatch(customerEmail(e.target.value));
-                        }}
-                    />
-                    <br />
+                        Send us your pre-order details &amp; we'll be in touch!   
+                    </div>
                     <br />
                     <br />
                     <Button
                         variant="outlined"
                         color="primary"
-                        onClick={() => {
-                            this.props.dispatch(showPreDialog(false));
-                            this.handleSubmit();
-                        }}
-                    >
-                        Pre-Order
-                        </Button>
+                        style={{textDecoration: "none"}}
+                    > 
+                        <Mailto
+                            email='sunflxwerlittle@gmail.com'
+                            headers={
+                                { subject: 'Pre-Order',
+                                  body: 'yo' }
+                            }/>
+                    </Button>
                 </div>
             </Dialog>
         );
