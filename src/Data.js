@@ -62,12 +62,14 @@ const sampleProducts = [
   },
   {
     id: 6,
-    name: "Pouch Bag",
+    name: "Pouch",
     category: "Bags",
-    price: 20,
+    price: 15,
     popular: true,
     imageUrls: [
-     "/images/bag_1.jpg"
+     "/images/bag_3.jpg",
+     "/images/bag_4.jpg",
+     "/images/bag_5.jpg"
     ]
   },
   {
@@ -119,7 +121,6 @@ const sampleProducts = [
     imageUrls: [
      "/images/earring_4.jpg",
       "/images/earring_1.jpg"
-
     ]
   },
   {
@@ -147,7 +148,7 @@ const sampleProducts = [
     id: 14,
     name: "PomPom Earrings",
     category: "Earrings",
-    price: 8,
+    price: 6,
     popular: true,
     imageUrls: [
       "/images/earring_7.jpg",
