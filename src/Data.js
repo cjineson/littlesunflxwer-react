@@ -62,6 +62,16 @@ const sampleProducts = [
   },
   {
     id: 6,
+    name: "Pouch Bag",
+    category: "Bags",
+    price: 20,
+    popular: true,
+    imageUrls: [
+     "/images/bag_1.jpg"
+    ]
+  },
+  {
+    id: 7,
     name: "Sunflower Hat",
     category: "Hats",
     price: 15,
@@ -71,7 +81,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 7,
+    id: 8,
     name: "Swirl Hat",
     category: "Hats",
     price: 15,
@@ -81,7 +91,7 @@ const sampleProducts = [
     ]
   },  
   {
-    id: 8,
+    id: 9,
     name: "Daisy Hat",
     category: "Hats",
     price: 15,
@@ -91,7 +101,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 9,
+    id: 10,
     name: "Heart Hat",
     category: "Hats",
     price: 15,
@@ -101,7 +111,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 10,
+    id: 11,
     name: "Sunflower Earrings",
     category: "Earrings",
     price: 8,
@@ -113,7 +123,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 11,
+    id: 12,
     name: "Daisy Earrings",
     category: "Earrings",
     price: 8,
@@ -124,13 +134,24 @@ const sampleProducts = [
     ]
   },
   {
-    id: 12,
+    id: 13,
     name: "Sunshine Earrings",
     category: "Earrings",
     price: 8,
     popular: true,
     imageUrls: [
       "/images/earring_5.jpg"
+    ]
+  },
+  {
+    id: 14,
+    name: "PomPom Earrings",
+    category: "Earrings",
+    price: 8,
+    popular: true,
+    imageUrls: [
+      "/images/earring_7.jpg",
+      "/images/earring_8.jpg"
     ]
   },
 ];
@@ -146,13 +167,13 @@ const categories = [
   {
     name: "Earrings",
     imageUrl: "/images/earring_3.jpg",
-    desc: "Hand-made crocheted flower earrings in a range of colours",
+    desc: "Hand-made crocheted earrings in a range of colours",
     icon: "group"
   },
   {
     name: "Hats",
     imageUrl: "/images/bag_hat_1.jpg",
-    desc: "Hand-made crocheted hats in a range of colours",
+    desc: "Hand-made crocheted hats in a range of colours and styles",
     icon: "group"
   },
   {
@@ -164,7 +185,7 @@ const categories = [
   {
     name: "Blankets",
     imageUrl: "/images/blanket_1.jpg",
-    desc: "Hand-made crocheted blankets in a variety of sizes and colours",
+    desc: "Hand-made crocheted blankets in a variety of styles and sizes",
     icon: "group"
   },
 ];
