@@ -53,7 +53,7 @@ class ConnectedHeader extends Component {
     return (
       <AppBar
         position="static"
-        style={{ backgroundColor: "#FAFAFB", padding: 10 }}
+        style={{ backgroundColor: "#FAFAFB", padding: 2 }}
       >
         <Toolbar>
           <div className="left-part">
@@ -131,12 +131,6 @@ class ConnectedHeader extends Component {
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
-
-            <img
-              src={bee}
-              alt={"Bee"}
-              style={{ marginLeft: 10, height: "35px" }}
-            />
 
             <Menu
               anchorEl={anchorEl}
