@@ -27,14 +27,14 @@ const sampleProducts = [
   },
   {
     id: 3,
-    name: "Daffodil Hair Clips",
+    name: "Rainbow Flower Hair Clips",
     category: "Hair Clips",
     price: 6,
     description:
-      "Pair of Daffodil Hair Clips",
+      "Pair of Rainbow Flower Hair Clips",
     popular: true,
     imageUrls: [
-      "/images/clips_5.jpg"
+      "/images/clips_8.jpg"
     ]
   },
   {

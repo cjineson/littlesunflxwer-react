@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import SearchIcon from "@material-ui/icons/Search";
 import "./Header.css";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -19,6 +20,9 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
+import TextField from "@material-ui/core/TextField";
+import Box from "@material-ui/core/Box";
+
 
 const mapStateToProps = state => {
   return {
@@ -49,7 +53,7 @@ class ConnectedHeader extends Component {
     return (
       <AppBar
         position="static"
-        style={{ backgroundColor: "#FAFAFB", padding: 10 }}
+        style={{ backgroundColor: "#FAFAFB", padding: 10}}
       >
         <Toolbar>
           <div className="left-part">
@@ -68,49 +72,7 @@ class ConnectedHeader extends Component {
                 style={{ marginLeft: 10, height: "35px"}}
               />
             </a>
-            
-            {/* <a href="/" style={{ textDecoration: "none", fontSize: "1em"}}><p style={{ color: "black" }}><span role="img" aria-label="sunflower">🌻</span>&nbsp;&nbsp;Little Sunflxwer</p></a> */}
-{/* 
-            <TextField
-              label="Search products"
-              value={this.state.searchTerm}
-              onChange={e => {
-                this.setState({ searchTerm: e.target.value });
-              }}
-              style={{ marginLeft: 30, width: 250, marginBottom: 15 }}
-            />
-
-            <Select
-              style={{ maxWidth: 200, marginLeft: 20 }}
-              value={this.state.categoryFilterValue}
-              MenuProps={{
-                style: {
-                  maxHeight: 500
-                }
-              }}
-              onChange={e => {
-                this.setState({ categoryFilterValue: e.target.value });
-              }}
-            >
-              {categoryOptions}
-            </Select>
-
-            <Button
-              style={{ marginLeft: 20 }}
-              variant="outlined"
-              color="primary"
-              onClick={() => {
-                this.props.history.push(
-                  "/?category=" +
-                  this.state.categoryFilterValue +
-                  "&term=" +
-                  this.state.searchTerm
-                );
-              }}
-            >
-              {" "}
-              Search
-            </Button> */}
+                      
           </div>
           <div className="right-part">
             {/* {!this.props.loggedInUser ? (
@@ -134,6 +96,30 @@ class ConnectedHeader extends Component {
                   <Person />
                 </Avatar>
               )} */}
+
+<Box style={{ display: "flex", marginLeft: 20 }}>
+              <TextField
+                value={this.state.searchTerm}
+                onChange={e => {
+                  this.setState({ searchTerm: e.target.value });
+                }}
+                style={{maxWidth: 250 }}
+              />
+
+              <IconButton
+                style={{ marginLeft: 2 }}
+                variant="outlined"
+                color="primary"
+                onClick={() => {
+                  this.props.history.push(
+                    "/?category=All%20Items&term=" +
+                    this.state.searchTerm
+                  );
+                }}
+              >
+                <SearchIcon />
+              </IconButton>
+            </Box>
 
             <IconButton
               aria-label="Cart"
