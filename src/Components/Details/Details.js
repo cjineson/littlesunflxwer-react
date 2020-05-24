@@ -102,14 +102,12 @@ class ConnectedDetails extends Component {
 
           <div>
             {this.state.item.imageUrls.map((value, index) => {
-              return <img key={index} src={this.state.item.imageUrls[index]} alt="" width={295}
+              return <img key={index} src={this.state.item.imageUrls[index]} alt="" width={350} height={350}
                 style={{
                   border: "1px solid lightgray",
                   marginRight: "30px",
                   marginBottom: "30px",
-                  borderRadius: "5px",
-                  objectFit: "cover"
-                }} />
+                  borderRadius: "5px"                }} />
             })}
 
             <div
