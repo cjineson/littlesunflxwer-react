@@ -10,6 +10,9 @@ import Details from "./Components/Details/Details";
 import Order from "./Components/Order/Order";
 import Footer from "./Components/Footer/Footer";
 
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
 class App extends Component {
   render() {
     return (

@@ -128,16 +128,16 @@ class ConnectedOrder extends Component {
           <p style={{ fontSize: "1.5em"}}>Your Details</p>
           {/* <p>Items marked * are required</p> */}
           <form onSubmit={this.handleSubmit} noValidate>
-            <FormControl required="true" error={this.state.errors.fullname.length>0}>
+            <FormControl required={true} error={this.state.errors.fullname.length>0}>
               <InputLabel htmlFor="fullname">Full Name</InputLabel>
               <Input id="fullname" name="fullname" onChange={e => this.handleChange(e)}/>
             </FormControl>
-            <FormControl required="true" error={this.state.errors.email.length>0}>
+            <FormControl required={true} error={this.state.errors.email.length>0}>
               <InputLabel htmlFor="email">Email address</InputLabel>
               <Input id="email" name="email" onChange={e => this.handleChange(e)} aria-describedby="email-helper-text" />
               {/* <FormHelperText id="email-helper-text">We'll never share your email.</FormHelperText> */}
             </FormControl>
-            <FormControl required="true">
+            <FormControl required={true}>
               <InputLabel htmlFor="addr1">Address Line 1</InputLabel>
               <Input id="addr1" />
             </FormControl>
@@ -145,7 +145,7 @@ class ConnectedOrder extends Component {
               <InputLabel htmlFor="addr2">Address Line 2</InputLabel>
               <Input id="addr2" />
             </FormControl>
-            <FormControl required="true">
+            <FormControl required={true}>
               <InputLabel htmlFor="town">Town</InputLabel>
               <Input id="town" />
             </FormControl>
@@ -153,34 +153,27 @@ class ConnectedOrder extends Component {
               <InputLabel htmlFor="county">County</InputLabel>
               <Input id="county" />
             </FormControl>
-            <FormControl required="true">
+            <FormControl required={true}>
               <InputLabel htmlFor="postcode">Postcode</InputLabel>
               <Input id="postcode" />
             </FormControl>
+{/* 
+            {validateForm(this.state) && 
+*/}
 
-            {/* {validateForm(this.state) &&
               <div align="center"> 
                 <Checkout
               name={'Chris'}
               email={'chris@test.com'}
-              zipCode={'123'}
               description={'Order'}
               amount={totalPrice}
               />
               </div>
-            } */}
-
-
-            <div align="center"> 
-                <Checkout
-              name={'Chris'}
-              email={'chris@test.com'}
-              zipCode={'123'}
-              description={'Order'}
-              amount={totalPrice}
-              />
-              </div>
-
+            
+            
+{/* 
+            } 
+*/}
 
           </form>
         </div>
