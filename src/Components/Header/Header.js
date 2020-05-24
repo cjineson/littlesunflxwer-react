@@ -53,7 +53,7 @@ class ConnectedHeader extends Component {
     return (
       <AppBar
         position="static"
-        style={{ backgroundColor: "#FAFAFB", padding: 10}}
+        style={{ backgroundColor: "#FAFAFB", padding: 10 }}
       >
         <Toolbar>
           <div className="left-part">
@@ -69,10 +69,10 @@ class ConnectedHeader extends Component {
               <img
                 src={logo}
                 alt={"Logo"}
-                style={{ marginLeft: 10, height: "35px"}}
+                style={{ marginLeft: 10, height: "35px" }}
               />
             </a>
-                      
+
           </div>
           <div className="right-part">
             {/* {!this.props.loggedInUser ? (
@@ -97,13 +97,13 @@ class ConnectedHeader extends Component {
                 </Avatar>
               )} */}
 
-<Box style={{ display: "flex", marginLeft: 20 }}>
+            <Box style={{ display: "flex", marginLeft: 20 }}>
               <TextField
                 value={this.state.searchTerm}
                 onChange={e => {
                   this.setState({ searchTerm: e.target.value });
                 }}
-                style={{maxWidth: 250 }}
+                style={{ maxWidth: 250 }}
               />
 
               <IconButton
@@ -131,11 +131,11 @@ class ConnectedHeader extends Component {
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
-            
+
             <img
-                src={bee}
-                alt={"Bee"}
-                style={{ marginLeft: 10, height: "35px"}}
+              src={bee}
+              alt={"Bee"}
+              style={{ marginLeft: 10, height: "35px" }}
             />
 
             <Menu
