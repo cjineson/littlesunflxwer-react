@@ -27,18 +27,30 @@ const sampleProducts = [
   },
   {
     id: 3,
-    name: "Rainbow Flower Hair Clips",
+    name: "Daffodil Hair Clips",
     category: "Hair Clips",
     price: 6,
     description:
-      "Pair of Rainbow Flower Hair Clips",
+      "Pair of Daffodil Hair Clips",
     popular: true,
     imageUrls: [
-      "/images/clips_8.jpg"
+      "/images/clips_5.jpg"
     ]
   },
+{
+  id: 4,
+  name: "Rainbow daffodil Hair Clips",
+  category: "Hair Clips",
+  price: 6,
+  description:
+    "Pair of Rainbow Flower Hair Clips",
+  popular: true,
+  imageUrls: [
+    "/images/clips_8.jpg"
+  ]
+},
   {
-    id: 4,
+    id: 5,
     name: "Blanket",
     category: "Blankets",
     price: 30,
@@ -51,7 +63,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     name: "Backpack",
     category: "Bags",
     price: 20,
@@ -61,7 +73,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     name: "Pouch",
     category: "Bags",
     price: 15,
@@ -73,7 +85,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 7,
+    id: 8,
     name: "Sunflower Hat",
     category: "Hats",
     price: 15,
@@ -83,7 +95,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 8,
+    id: 9,
     name: "Swirl Hat",
     category: "Hats",
     price: 15,
@@ -93,7 +105,7 @@ const sampleProducts = [
     ]
   },  
   {
-    id: 9,
+    id: 10,
     name: "Daisy Hat",
     category: "Hats",
     price: 15,
@@ -103,7 +115,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 10,
+    id: 11,
     name: "Heart Hat",
     category: "Hats",
     price: 15,
@@ -113,7 +125,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 11,
+    id: 12,
     name: "Sunflower Earrings",
     category: "Earrings",
     price: 8,
@@ -124,7 +136,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 12,
+    id: 13,
     name: "Daisy Earrings",
     category: "Earrings",
     price: 8,
@@ -135,7 +147,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 13,
+    id: 14,
     name: "Sunshine Earrings",
     category: "Earrings",
     price: 8,
@@ -145,7 +157,7 @@ const sampleProducts = [
     ]
   },
   {
-    id: 14,
+    id: 15,
     name: "PomPom Earrings",
     category: "Earrings",
     price: 6,
