@@ -12,6 +12,20 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Tooltip from "@material-ui/core/Tooltip";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
+import FilledInput from "@material-ui/core/FilledInput";
+
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import blue from '@material-ui/core/colors/blue';
+import purple from '@material-ui/core/colors/purple';
+
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: purple[500] }, // Purple and green play nicely together.
+    secondary: { main: '#11cb5f' }, // This is just green.A700 as hex.
+  },
+  typography: { useNextVariants: true },
+});
 
 class ConnectedItem extends Component {
   constructor(props) {
@@ -22,7 +36,9 @@ class ConnectedItem extends Component {
   }
 
   render() {
-    return (       
+    return (
+      <MuiThemeProvider theme={theme}>
+
         <Card
           style={{ width: 355, height: 280, margin: 10, display: "inline-block" }}
         >
@@ -57,25 +73,25 @@ class ConnectedItem extends Component {
           <div style={{ height: 45, width: "100%"}}>
                 <div style={{ float: "left"}}>
                   <Button
-                  size="small"
-                  style={{ marginRight: 60 }}
+                  size="medium"
+                  style={{ }}
                   onClick={() => {
                     this.props.history.push("/details/" + this.props.item.id);
                   }}>
                   {" "}
-                  Details
+                  Details...
                 </Button>
               </div>
               <div style={{ float: "right"}}>
-                <TextField
+                <input
+                    style= {{ border: "none", textAlign: "right", fontSize: "1em"}}
                     type="number"
+                    placeholder="1"
                     value={this.state.quantity}
-                    style={{ marginLeft: 20, marginBottom: 10, width: 30, fontSize: ".3em",}}
-                    inputProps={{ min: 1, max: 10, step: 1 }}
                     onChange={e => {
                       this.setState({ quantity: parseInt(e.target.value) });
                     }}
-                  />
+                />
                 <Tooltip title="Add to cart">
                   <IconButton
                     size="small"
@@ -96,6 +112,7 @@ class ConnectedItem extends Component {
             </div>
           </CardActions>
         </Card>
+      </MuiThemeProvider>
     );
   }
 }
