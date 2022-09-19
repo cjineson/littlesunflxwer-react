@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/littlesunflxwer-react/static/css/main.18264b2c.chunk.css",
+    "main.js": "/littlesunflxwer-react/static/js/main.0023ce10.chunk.js",
+    "main.js.map": "/littlesunflxwer-react/static/js/main.0023ce10.chunk.js.map",
+    "runtime-main.js": "/littlesunflxwer-react/static/js/runtime-main.37a486a8.js",
+    "runtime-main.js.map": "/littlesunflxwer-react/static/js/runtime-main.37a486a8.js.map",
+    "static/js/2.ba9a4c03.chunk.js": "/littlesunflxwer-react/static/js/2.ba9a4c03.chunk.js",
+    "static/js/2.ba9a4c03.chunk.js.map": "/littlesunflxwer-react/static/js/2.ba9a4c03.chunk.js.map",
+    "index.html": "/littlesunflxwer-react/index.html",
+    "precache-manifest.0866958655089561b8a97ebb6607e473.js": "/littlesunflxwer-react/precache-manifest.0866958655089561b8a97ebb6607e473.js",
+    "service-worker.js": "/littlesunflxwer-react/service-worker.js",
+    "static/css/main.18264b2c.chunk.css.map": "/littlesunflxwer-react/static/css/main.18264b2c.chunk.css.map",
+    "static/js/2.ba9a4c03.chunk.js.LICENSE.txt": "/littlesunflxwer-react/static/js/2.ba9a4c03.chunk.js.LICENSE.txt",
+    "static/media/background.jpg": "/littlesunflxwer-react/static/media/background.50fc884e.jpg",
+    "static/media/bee.jpg": "/littlesunflxwer-react/static/media/bee.3127570d.jpg",
+    "static/media/flower.jpg": "/littlesunflxwer-react/static/media/flower.bc02a0dc.jpg",
+    "static/media/logo.jpg": "/littlesunflxwer-react/static/media/logo.684a0518.jpg",
+    "static/media/sad-sunflower.png": "/littlesunflxwer-react/static/media/sad-sunflower.a035cdd7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.37a486a8.js",
+    "static/js/2.ba9a4c03.chunk.js",
+    "static/css/main.18264b2c.chunk.css",
+    "static/js/main.0023ce10.chunk.js"
+  ]
+}
