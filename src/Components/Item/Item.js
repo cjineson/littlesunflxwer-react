@@ -11,10 +11,34 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Tooltip from "@material-ui/core/Tooltip";
 import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
+import FilledInput from "@material-ui/core/FilledInput";
+
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import blue from '@material-ui/core/colors/blue';
+import purple from '@material-ui/core/colors/purple';
+
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: purple[500] }, // Purple and green play nicely together.
+    secondary: { main: '#11cb5f' }, // This is just green.A700 as hex.
+  },
+  typography: { useNextVariants: true },
+});
 
 class ConnectedItem extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      quantity: 1
+    };
+  }
+
   render() {
-    return (       
+    return (
+      <MuiThemeProvider theme={theme}>
+
         <Card
           style={{ width: 355, height: 280, margin: 10, display: "inline-block" }}
         >
@@ -45,36 +69,50 @@ class ConnectedItem extends Component {
               </div>
             </CardContent>
           </CardActionArea>
-          <CardActions
-            style={{ display: "flex", alignItems: "center", height: 45 }}
-          >
-            <Button
-              size="small"
-              style={{ marginRight: 60 }}
-              onClick={() => {
-                this.props.history.push("/details/" + this.props.item.id);
-              }}
-            >
-              {" "}
-              Details
-            </Button>
-            <Tooltip title="Add to cart">
-              <IconButton
-                size="small"
-                onClick={e => {
-                  e.stopPropagation();
-                  this.props.dispatch(
-                    addItemInCart({ ...this.props.item, quantity: 1 })
-                  );
-                }}
-                color="primary"
-                aria-label="Add to shopping cart"
-              >
-                <AddShoppingCartIcon size="small" />
-              </IconButton>
-            </Tooltip>
+          <CardActions>
+          <div style={{ height: 45, width: "100%"}}>
+                <div style={{ float: "left"}}>
+                  <Button
+                  size="medium"
+                  style={{ }}
+                  onClick={() => {
+                    this.props.history.push("/details/" + this.props.item.id);
+                  }}>
+                  {" "}
+                  Details...
+                </Button>
+              </div>
+              <div style={{ float: "right"}}>
+                <input
+                    style= {{ border: "none", textAlign: "right", fontSize: "1em"}}
+                    type="number"
+                    placeholder="1"
+                    value={this.state.quantity}
+                    onChange={e => {
+                      this.setState({ quantity: parseInt(e.target.value) });
+                    }}
+                />
+                <Tooltip title="Add to cart">
+                  <IconButton
+                    size="small"
+                    onClick={e => {
+                      e.stopPropagation();
+                      this.props.dispatch(
+                        addItemInCart({ ...this.props.item, quantity: this.state.quantity })
+                      );
+                    }}
+                    color="primary"
+                    aria-label="Add to shopping cart"
+                  >
+                    <AddShoppingCartIcon size="small" />
+                  </IconButton>
+                </Tooltip>
+              </div>
+              <div style={{ clear: "both" }}></div>
+            </div>
           </CardActions>
         </Card>
+      </MuiThemeProvider>
     );
   }
 }

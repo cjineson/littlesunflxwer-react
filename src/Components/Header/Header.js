@@ -46,10 +46,20 @@ class ConnectedHeader extends Component {
     anchorEl: null,
     categoryFilterValue: categories[0].name
   };
+  
+  handleChange = (event) => {
+    this.setState({id: event.target.value});
+  }
+  handleSubmit = (event) => {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+    this.props.history.push(
+      "/?category=All%20Items&term=" +
+      this.state.searchTerm)
+  }
 
   render() {
     let { anchorEl } = this.state;
-
     return (
       <AppBar
         position="static"
@@ -97,29 +107,22 @@ class ConnectedHeader extends Component {
                 </Avatar>
               )} */}
 
-            <Box style={{ display: "flex", marginLeft: 20 }}>
-              <TextField
+            <form onSubmit={this.handleSubmit} style={{ border: "none" }}>
+              <input
+                style= {{ border: "none", fontSize: "1em", backgroundColor: "#FAFAFB", textDecoration: "none"}}
+                placeholder="Search..."
                 value={this.state.searchTerm}
-                onChange={e => {
-                  this.setState({ searchTerm: e.target.value });
-                }}
-                style={{ maxWidth: 250 }}
+                onChange={this.handleChange()}
               />
 
               <IconButton
                 style={{ marginLeft: 2 }}
-                variant="outlined"
+                type="submit"
                 color="primary"
-                onClick={() => {
-                  this.props.history.push(
-                    "/?category=All%20Items&term=" +
-                    this.state.searchTerm
-                  );
-                }}
               >
                 <SearchIcon />
               </IconButton>
-            </Box>
+            </form>
 
             <IconButton
               aria-label="Cart"
